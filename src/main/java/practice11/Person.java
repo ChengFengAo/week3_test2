@@ -23,4 +23,23 @@ public class Person {
     public String introduce() {
         return "My name is "+getName()+". I am "+getAge()+" years old.";
     }
+    public int hashCode() {
+        return id;
+
+    }
+    public  boolean equals(Object obj){
+        Boolean result=false;
+        if(obj instanceof Person)
+        {
+          Person p=(Person) obj;
+            if (this.getId()==p.getId()) {
+                result=true;
+            }
+
+        }
+        else {
+            result=false;
+        }
+        return result;
+    }
 }
