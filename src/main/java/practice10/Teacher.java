@@ -1,13 +1,10 @@
 package practice10;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Teacher extends Person{
     private Set<Klass> classes=new HashSet<>();
-    private Iterator<Klass> cls;     //定义迭代器
-   public Teacher(int id, String name, int age) {
+    public Teacher(int id, String name, int age) {
         super(id,name,age);
     }
     public Teacher(int id, String name, int age,HashSet<Klass> c) {
@@ -27,7 +24,7 @@ public class Teacher extends Person{
         }
         else
             if(this.getClasses().size()!=0){
-                cls=this.getClasses().iterator();
+                Iterator<Klass>  cls=this.getClasses().iterator();
                 while (cls.hasNext())
            {
                contains.add(cls.next().getNumber());
